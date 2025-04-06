@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loan Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Calculator</h1>
+    <div class="calculator">
+      <div class="form-group">
+       <h3>Loan Amount</h3> 
+        <div class="range-group">
+          <input type="range" id="loanAmount" min="0" max="100000" value="0" step="100">
+          <input type="text" id="loanAmountText" value="0" placeholder="0" />
+        </div>
+        <h5>max 100,000</h5><br>
+        <small>Please specify the amount of loan you require</small>
+      </div>
+
+      <br> 
+
+      <div class="form-group">
+        <h3>Loan Tenure</h3>
+        <div class="range-group">
+          <input type="range" id="loanTenure" min="1" max="30" value="1">
+          <input type="text" id="loanTenureText" value="0 years">
+        </div>
+        <small>Please specify the loan tenure in years</small>
+      </div>
+      
+      
+
+      <div class="form-group">
+        <h3>Interest Rate</h3>
+        <div class="range-group">
+          <input type="range" id="interestRate" min="1" max="20" value="5">
+          <input type="text" id="interestRateText" value="5%">
+        </div>
+        <small>Please specify annual interest rate</small>
+      </div>
+    </div>
+
+    <div class="result-box">
+      <h2>Monthly installment</h2>
+      <div class="highlight" id="monthlyInstallment">$94</div>
+      <br>
+      <p><strong>Total repayment</strong>
+        <br>
+        <span id="totalRepayment">$5,661</span></p>
+      <p><strong>Total interest paid</strong>
+        <br>
+        <span id="totalInterest">$661</span></p>
+      <h3>Ready to apply?</h3>
+      <br>
+      <p>Click the button below to apply for a loan.</p>
+      <button class="apply-btn">Apply now</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
